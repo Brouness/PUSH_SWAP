@@ -1,33 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_addback.c                                 :+:      :+:    :+:   */
+/*   op_ra_rb_rr_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/13 13:08:41 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/20 10:21:49 by ybourajl         ###   ########.fr       */
+/*   Created: 2026/02/22 12:48:19 by ybourajl          #+#    #+#             */
+/*   Updated: 2026/02/28 15:36:31 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-void	ft_stack_addback(Stack **one, Stack *last)
+void	reverce(t_Stack **stack)
 {
-	int	i;
-	Stack	*iter;
-	iter = *one;
-	if (!last)
+	t_Stack	*tmp;
+
+	if (!*stack || !(*stack)->next)
 		return ;
-	if (!iter)
-	{
-		*one = last;
-		return ;
-	}
-	i = 0;
-	while (iter->next)
-	{
-		iter = iter->next;
-	}
-	iter->next = last;
+	tmp = *stack;
+	*stack = (*stack)->next;
+	tmp->next = NULL;
+	ft_stack_addback(stack, tmp);
+}
+
+void	ra(t_Stack **a)
+{
+	reverce(a);
+	write (1, "ra\n", 3);
+}
+
+void	rb(t_Stack **b)
+{
+	reverce(b);
+	write(1, "rb\n", 3);
+}
+
+void	rr(t_Stack **a, t_Stack **b)
+{
+	reverce(a);
+	reverce(b);
+	write(1, "rr\n", 3);
 }

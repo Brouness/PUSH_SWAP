@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/23 13:19:55 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 16:52:48 by ybourajl         ###   ########.fr       */
+/*   Created: 2025/11/22 13:30:01 by ybourajl          #+#    #+#             */
+/*   Updated: 2026/02/28 16:53:11 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
-# include <stdlib.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
 # include <unistd.h>
-
+# include <stdlib.h>
+// struct
 typedef struct t_push_swap
 {
 	int					data;
@@ -34,6 +38,7 @@ void	ft_add_front(t_Stack **a, t_Stack *b);
 int		ft_lst_size(t_Stack *a);
 void	ft_free_stack(t_Stack *a);
 // push_swap helper functions
+int		handle_arguments(t_Stack **a, char **av);
 void	ft_push_swap(t_Stack **a, t_Stack **b);
 int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
@@ -70,5 +75,16 @@ void	reverce_rotate(t_Stack **stack);
 void	reverce(t_Stack **stack);
 void	exec(t_Stack **a, t_Stack **b, t_Stack *cheapt);
 void	rot_smaller(t_Stack **a);
+//get_next_line_functions
+size_t	ft_strlen(const char *str);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strchr(char *str, int c);
+char	*ft_strdup(char *str);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+char	*ft_search(char *tmp, char *buff);
+char	*ft_finish(char **ptr_tmp, char **ptr_buff, ssize_t b);
+void	ft_extract(char **ptr_tmp);
+char	*get_next_line(int fd);
 
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 11:14:35 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 16:52:55 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/02/28 16:53:31 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static void	ft_free(char	**str)
 	free(str);
 }
 
-static int	handle_arguments(t_Stack **a, char **av)
+int	handle_arguments(t_Stack **a, char **av)
 {
 	char	**str;
 	int		i;
