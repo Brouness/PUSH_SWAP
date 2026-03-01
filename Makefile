@@ -2,7 +2,6 @@ NAME = push_swap
 BONUS = checker
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-AR = ar rcs
 RM = rm -f
 
 SRC = 	algorithm_utils.c algorithm.c exec.c ft_atoi.c ft_push_swap.c\
@@ -22,12 +21,13 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-bonus: $(BONUS)
 
-$(BONUS): $(OBJ_BONUS)
-	$(CC) $(FLAGS) $(OBJ_BONUS) -o $(BONUS)
+# bonus: $(BONUS)
 
-%.o : %.c
+# $(BONUS): $(OBJ_BONUS)
+# 	$(CC) $(FLAGS) $(OBJ_BONUS) -o $(BONUS)
+
+%.o : %.c push_swap.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

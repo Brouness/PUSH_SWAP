@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 11:14:35 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 16:53:31 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/02/28 23:44:05 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,24 +103,24 @@ int	handle_arguments(t_Stack **a, char **av)
 	return (1);
 }
 
-int	main(int ac, char **av)
-{
-	t_Stack	*a;
-	t_Stack	*b;
+// int	main(int ac, char **av)
+// {
+// 	t_Stack	*a;
+// 	t_Stack	*b;
 
-	a = NULL;
-	b = NULL;
-	if (ac == 1)
-		return (write(1, "Error\n", 6));
-	else
-	{
-		if (!handle_arguments(&a, av))
-		{
-			return (ft_free_stack(a), write(1, "Error\n", 6), 0);
-		}
-	}
-	ft_push_swap(&a, &b);
-	ft_free_stack(a);
-	ft_free_stack(b);
-	return (0);
-}
+// 	a = NULL;
+// 	b = NULL;
+// 	if (ac == 1)
+// 		return (write(1, "Error\n", 6));
+// 	else
+// 	{
+// 		if (!handle_arguments(&a, av))
+// 		{
+// 			return (ft_free_stack(a), write(1, "Error\n", 6), 0);
+// 		}
+// 	}
+// 	ft_push_swap(&a, &b);
+// 	ft_free_stack(a);
+// 	ft_free_stack(b);
+// 	return (0);
+// }

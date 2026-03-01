@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 13:19:55 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 16:52:48 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/02/28 23:42:06 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		ft_lst_size(t_Stack *a);
 void	ft_free_stack(t_Stack *a);
 // push_swap helper functions
 void	ft_push_swap(t_Stack **a, t_Stack **b);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
 void	ft_sort_five(t_Stack **a, t_Stack **b);
 void	ft_sort_four(t_Stack **a, t_Stack **b);
