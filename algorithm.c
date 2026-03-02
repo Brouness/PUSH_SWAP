@@ -6,33 +6,11 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 12:32:24 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 14:24:35 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 14:22:39 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	stack_indexing(t_Stack **a)
-{
-	t_Stack	*ptr;
-	t_Stack	*find;
-	int		idx;
-
-	ptr = *a;
-	while (ptr)
-	{
-		idx = 0;
-		find = *a;
-		while (find)
-		{
-			if (find->data < ptr->data)
-				idx++;
-			find = find->next;
-		}
-		ptr->idx = idx;
-		ptr = ptr->next;
-	}
-}
 
 t_Stack	*min_node(t_Stack *a)
 {
@@ -104,9 +82,9 @@ void	cost_calculation(t_Stack **a, t_Stack **b, t_Stack **b_list)
 		(*b)->cost_a = pos_a - size_a;
 	if (((*b)->cost_a > 0 && (*b)->cost_b > 0)
 		|| ((*b)->cost_a < 0 && (*b)->cost_b < 0))
-		(*b)->total_cost = max(abs((*b)->cost_a), abs((*b)->cost_b));
+		(*b)->total_cost = max(ft_abs((*b)->cost_a), ft_abs((*b)->cost_b));
 	else
-		(*b)->total_cost = abs((*b)->cost_a) + abs((*b)->cost_b);
+		(*b)->total_cost = ft_abs((*b)->cost_a) + ft_abs((*b)->cost_b);
 }
 
 void	apply_algorithm(t_Stack **a, t_Stack **b)

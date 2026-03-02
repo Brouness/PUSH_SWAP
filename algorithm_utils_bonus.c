@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 15:43:48 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 15:34:07 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 14:20:03 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	max(int a, int b)
 	return (a);
 }
 
-int	abs(int x)
+int	ft_abs(int x)
 {
 	if (x < 0)
 		return (x = x * -1);
@@ -55,7 +55,6 @@ void	final_rotation(t_Stack **a)
 
 	if (!a || !*a)
 		return ;
-	stack_indexing(a);
 	initialise_stack_pos(a);
 	min = min_node(*a);
 	pos = min->pos;

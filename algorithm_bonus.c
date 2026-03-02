@@ -6,33 +6,11 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 12:32:24 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 15:34:23 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 12:30:32 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
-
-void	stack_indexing(t_Stack **a)
-{
-	t_Stack	*ptr;
-	t_Stack	*find;
-	int		idx;
-
-	ptr = *a;
-	while (ptr)
-	{
-		idx = 0;
-		find = *a;
-		while (find)
-		{
-			if (find->data < ptr->data)
-				idx++;
-			find = find->next;
-		}
-		ptr->idx = idx;
-		ptr = ptr->next;
-	}
-}
 
 t_Stack	*min_node(t_Stack *a)
 {

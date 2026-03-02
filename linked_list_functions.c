@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 10:36:33 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/27 15:20:34 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 13:00:50 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,25 +82,3 @@ void	ft_add_front(t_Stack **a, t_Stack *b)
 	b->next = *a;
 	*a = b;
 }
-// int main()
-// {
-// 	int i = 0;
-// 	t_Stack	*b;
-// 	b = NULL;
-// 	while (i < 5)
-// 	{
-// 		ft_t_Stack_addback(&b, ft_new_list(i));
-// 		i++;
-// 	}
-// 	i = 0;
-// 	i = ft_lst_size(b);
-// 	printf("this is the size of lst : %d\n", i);
-// 	t_Stack *f;
-// 	while (b)
-// 	{
-// 		f = b;
-// 		printf("this is the first node element : %d\n", b->data);
-// 		b = b->next;
-// 		free(f);
-// 	}
-// }

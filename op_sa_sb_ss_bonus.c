@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 10:42:59 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 15:36:59 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 12:19:23 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,15 @@ void	swap(t_Stack **stack)
 void	sa(t_Stack **a)
 {
 	swap(a);
-	write(1, "sa\n", 3);
 }
 
 void	sb(t_Stack **b)
 {
 	swap(b);
-	write (1, "sb\n", 3);
 }
 
 void	ss(t_Stack **a, t_Stack **b)
 {
 	swap(a);
 	swap(b);
-	write (1, "ss\n", 3);
 }

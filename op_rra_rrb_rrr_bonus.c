@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 13:13:02 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 15:36:45 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 12:19:10 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,15 @@ void	reverce_rotate(t_Stack **stack)
 void	rra(t_Stack **a)
 {
 	reverce_rotate(a);
-	write (1, "rra\n", 4);
 }
 
 void	rrb(t_Stack **b)
 {
 	reverce_rotate(b);
-	write (1, "rrb\n", 4);
 }
 
 void	rrr(t_Stack **a, t_Stack **b)
 {
 	reverce_rotate(b);
 	reverce_rotate(a);
-	write (1, "rrr\n", 4);
 }

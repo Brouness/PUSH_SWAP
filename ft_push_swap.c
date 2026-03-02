@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:38:04 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/27 16:54:49 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 14:33:15 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ void	ft_push_swap(t_Stack **a, t_Stack **b)
 		ft_sort_three(a);
 	if (ft_lst_size(*a) == 4)
 		ft_sort_four(a, b);
-	if (ft_lst_size(*a) == 5)
-		ft_sort_five(a, b);
-	if (ft_lst_size(*a) > 5)
+	if (ft_lst_size(*a) > 4)
 		apply_algorithm(a, b);
 }

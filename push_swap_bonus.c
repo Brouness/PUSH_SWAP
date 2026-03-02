@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 11:14:35 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 23:44:05 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 13:15:09 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,7 @@ static int	ft_dup_check(t_Stack *a)
 {	
 	int		tmp;
 	t_Stack	*temp;
-	t_Stack	*test;
 
-	test = a;
 	tmp = a->data;
 	a = a->next;
 	while (a)
@@ -90,8 +88,8 @@ int	handle_arguments(t_Stack **a, char **av)
 		while (str[j])
 		{
 			ft_stack_addback(a, ft_new_list(ft_atoi(str[j])));
-			if (!a)
-				return (1);
+			if (!*a || over_check(ft_atoi(str[j])))
+				return (free(str[j]), free(str), 0);
 			free(str[j]);
 			j++;
 		}
@@ -102,25 +100,3 @@ int	handle_arguments(t_Stack **a, char **av)
 	}
 	return (1);
 }
-
-// int	main(int ac, char **av)
-// {
-// 	t_Stack	*a;
-// 	t_Stack	*b;
-
-// 	a = NULL;
-// 	b = NULL;
-// 	if (ac == 1)
-// 		return (write(1, "Error\n", 6));
-// 	else
-// 	{
-// 		if (!handle_arguments(&a, av))
-// 		{
-// 			return (ft_free_stack(a), write(1, "Error\n", 6), 0);
-// 		}
-// 	}
-// 	ft_push_swap(&a, &b);
-// 	ft_free_stack(a);
-// 	ft_free_stack(b);
-// 	return (0);
-// }

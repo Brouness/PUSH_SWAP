@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 11:14:43 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 15:35:05 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 15:23:58 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_return(const char *str)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int		i;
 	int		s;
@@ -50,10 +50,19 @@ int	ft_atoi(const char *str)
 		if (r < 0)
 		{
 			if (s > 0)
-				return (-1);
-			return (0);
+				return (2147483648);
+			return (-2147483649);
 		}
 		i++;
 	}
+	if (str[i] != '\0')
+		return (2147483648);
 	return (r * s);
+}
+
+int	over_check(long atoi)
+{
+	if (2147483647 < atoi || -2147483648 > atoi)
+		return (1);
+	return (0);
 }

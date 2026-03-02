@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 13:13:12 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 15:37:32 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 14:33:51 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,6 @@ void	ft_sort_four(t_Stack **a, t_Stack **b)
 {
 	push_min(a, b);
 	ft_sort_three(a);
-	pa(a, b);
-}
-
-void	ft_sort_five(t_Stack **a, t_Stack **b)
-{
-	push_min(a, b);
-	push_min(a, b);
-	ft_sort_three(a);
-	pa(a, b);
 	pa(a, b);
 }
 

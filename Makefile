@@ -10,7 +10,8 @@ SRC = 	algorithm_utils.c algorithm.c exec.c ft_atoi.c ft_push_swap.c\
 
 SRC_BONUS = algorithm_bonus.c algorithm_utils_bonus.c exec_bonus.c ft_atoi_bonus.c ft_push_swap_bonus.c\
 			ft_split_bonus.c get_next_line_bonus.c get_next_line_utils_bonus.c linked_list_functions_bonus.c op_pa_pb_bonus.c\
-			op_ra_rb_rr_bonus.c op_rra_rrb_rrr_bonus.c op_sa_sb_ss_bonus.c push_swap_bonus.c utils_bonus.c
+			op_ra_rb_rr_bonus.c op_rra_rrb_rrr_bonus.c op_sa_sb_ss_bonus.c push_swap_bonus.c utils_bonus.c\
+			cheker_bonus.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -22,12 +23,12 @@ $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 
-# bonus: $(BONUS)
+bonus: $(BONUS)
 
-# $(BONUS): $(OBJ_BONUS)
-# 	$(CC) $(FLAGS) $(OBJ_BONUS) -o $(BONUS)
+$(BONUS): $(OBJ_BONUS)
+	$(CC) $(FLAGS) $(OBJ_BONUS) -o $(BONUS)
 
-%.o : %.c push_swap.h
+%.o : %.c push_swap.h push_swap_bonus.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: ybourajl <ybourajl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 13:30:01 by ybourajl          #+#    #+#             */
-/*   Updated: 2026/02/28 16:53:11 by ybourajl         ###   ########.fr       */
+/*   Updated: 2026/03/01 14:23:09 by ybourajl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 typedef struct t_push_swap
 {
 	int					data;
-	int					idx;
 	int					pos;
 	int					total_cost;
 	int					cost_a;
@@ -40,7 +39,8 @@ void	ft_free_stack(t_Stack *a);
 // push_swap helper functions
 int		handle_arguments(t_Stack **a, char **av);
 void	ft_push_swap(t_Stack **a, t_Stack **b);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
+int		over_check(long atoi);
 char	**ft_split(char const *s, char c);
 void	ft_sort_five(t_Stack **a, t_Stack **b);
 void	ft_sort_four(t_Stack **a, t_Stack **b);
@@ -49,12 +49,11 @@ void	ft_sort_two(t_Stack **a);
 void	apply_algorithm(t_Stack **a, t_Stack **b);
 void	initialise_stack_pos(t_Stack **a);
 // push_swap algorithme
-void	stack_indexing(t_Stack **a);
 t_Stack	*min_node(t_Stack *a);
 t_Stack	*find_target_node(t_Stack **a, t_Stack **b);
 void	cost_calculation(t_Stack **a, t_Stack **b, t_Stack **b_node);
 void	apply_algorithm(t_Stack **a, t_Stack **b);
-int		abs(int x);
+int		ft_abs(int x);
 int		max(int a, int b);
 t_Stack	*find_cheapest(t_Stack **b);
 void	final_rotation(t_Stack **a);
@@ -77,7 +76,7 @@ void	exec(t_Stack **a, t_Stack **b, t_Stack *cheapt);
 void	rot_smaller(t_Stack **a);
 //get_next_line_functions
 size_t	ft_strlen(const char *str);
-char	*ft_strjoin(char *s1, char *s2);
+// char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(char *str, int c);
 char	*ft_strdup(char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
