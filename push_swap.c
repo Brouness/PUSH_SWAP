@@ -41,9 +41,7 @@ static int	ft_dup_check(t_Stack *a)
 {	
 	int		tmp;
 	t_Stack	*temp;
-	t_Stack	*test;
 
-	test = a;
 	tmp = a->data;
 	a = a->next;
 	while (a)
